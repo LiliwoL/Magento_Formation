@@ -2,6 +2,18 @@
 
 Découverte de la création de module dans Magento
 
+## Activation des modules
+
+```bash
+bin/magento setup:upgrade
+```
+
+## Compilation des dépendances
+
+```bash
+bin/magento setup:di:compile
+```
+
 ## ModuleVide
 
 L'architecture de base et les fiochiers requis dans un module.
