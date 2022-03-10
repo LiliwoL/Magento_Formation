@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="FormationMagento_ModuleVide" setup_version="0.0.1">
+        <sequence>
+			<!-- Modules dont le module présent dépend -->
+            <module name="Magento_Catalog"/>
+			<!-- we would put <module name=”..” /> nodes under the sequence node. -->
+        </sequence>
+    </module>
+</config>

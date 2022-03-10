@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<!--
+		Les événements sont exécutés par le module lorsque certaines actions sont déclenchées. Magento nous permet de créer nos propres événements qui peuvent être envoyés en code. Lorsqu'un événement est distribué, il peut transmettre des données à n'importe quel observateur configuré pour surveiller cet événement.
+
+		Dans ce fichier d'événements, nous déclenchons deux événements ; un événement est appelé après l'ajout du produit au panier de paiement, le module appelle CaissePanierAjouterObservateur Observer, et le deuxième événement avant devis soumettre qui appelle CitationEnvoyerObservateur Observateur.
+
+	-->
+
+	<event name="checkout_cart_product_add_after">
+		<observer name="extension_checkout_cart_product_add_after" instance="FormationMagento\PremierModule\Observer\CheckoutCartAddObserver" />
+	</event>
+	<event name="sales_model_service_quote_submit_before">
+		<observer name="unique_name" instance="FormationMagento\PremierModule\Observer\QuoteSubmitObserver" />
+	</event>
+</config>
