@@ -1,0 +1,15 @@
+type Query {
+    getCountNumberDays(input: DateInput): DateOutput
+      @resolver(class: "FormationMagento\\GraphQLCountNumberDays\\Model\\Resolver\\GetCountNumberDays")
+      @cache(cacheIdentity: "FormationMagento\\GraphQLCountNumberDays\\Model\\Resolver\\GetCountNumberDays\\Identity")
+      @doc(description: "Find the number of days that a month has in the specified year")
+}
+
+input DateInput {
+    year: Int
+    month: Int
+}
+
+type DateOutput {
+    days: Int
+}
